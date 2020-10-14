@@ -4,7 +4,16 @@
  * For details, see http://www.apache.org/licenses/LICENSE-2.0.
  */
 
-body {
+/*********************************************/
+.dataTables_scrollHeadInner{
+    width: 100%!important;
+}
+.dataTable{
+    width: 100%!important;
+}
+/*********************************************/
+
+ body {
     background-color: #f8f8f8;
 }
 
@@ -17,7 +26,7 @@ body {
     padding: 30px 15px 0 15px;
     min-height: 568px;
     min-height: 100%;
-    background-color: #fff;
+    background-color: #e1eae8;
 }
 
 @media(min-width:768px) {
@@ -25,8 +34,8 @@ body {
         position: inherit;
         margin-left: 200px; /*Changed from 250*/
         padding: 25px 10px 0 10px;
-        border-left: 1px solid #e7e7e7;
-        min-height: 100%;
+        border-left: 1px solid #e1eae8;
+        min-height: 100vh!important;
     }
 }
 
@@ -124,7 +133,7 @@ body {
 }
 
 .sidebar ul li a.active {
-    background-color: #eee;
+    background-color:transparent;
 }
 
 .sidebar .arrow {
@@ -157,7 +166,7 @@ body {
         z-index: 1;
         position: absolute;
         width: 200px; /*Changed from 250px*/
-        margin-top: 51px;
+        margin-top: 60px;
     }
 
     .navbar-top-links .dropdown-messages,
@@ -190,7 +199,7 @@ body {
 }
 
 .btn-danger.btn-outline {
-    color: #d9534f;
+    color: #cc0000;
 }
 
 .btn-primary.btn-outline:hover,
@@ -343,17 +352,18 @@ table.dataTable thead .sorting:after {
 }
 
 .panel-red {
-    border-color: #d9534f;
+    border-color: #1d7874;
 }
 
 .panel-red .panel-heading {
-    border-color: #d9534f;
+    border-color: #1d7874;
     color: #fff;
-    background-color: #d9534f;
+    font-size: 1.5rem;
+    background-color: #1d7874;
 }
 
 .panel-red a {
-    color: #d9534f;
+    color: #cc0000;
 }
 
 .panel-red a:hover {
@@ -380,17 +390,18 @@ table.dataTable thead .sorting:after {
 
 /*panel-orange*/
 .panel-orange {
-    border-color: #e89106;
+    border-color: #1d7874;
 }
 
 .panel-orange .panel-heading {
-    border-color: #e89106;
+    border-color: #1d7874;
     color: #fff;
-    background-color: #e89106;
+    font-size: 1.5rem;
+    background-color: #1d7874;
 }
 
 .panel-orange a {
-    color: #e89106;
+    color: #cc00cc;
 }
 
 .panel-orange a:hover {

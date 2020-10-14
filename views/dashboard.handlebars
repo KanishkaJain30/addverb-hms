@@ -3,69 +3,122 @@
 <!-- <link rel="stylesheet" type="text/css" href="/css/bootstrap.min.css"> -->
 
 <div class="row">
-    <div class="col-lg-4 col-md-4">
-        <div class="panel panel-primary">
-            <div class="panel-heading" id="patientsInRooms">
+    <ul class="nav nav-tabs" style="list-style-type:none;">
+        <li class="active" class="col-lg-4 col-md-4" style="width: 33.33%;">
+            <a data-toggle="tab" href="#tab1">
+                <div >
+                    <div class="panel panel-primary">
+                        <div class="panel-heading" id="patientsInRooms">
+                            <div class="row">
+                                <div class="col-xs-3">
+                                    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:svgjs="http://svgjs.com/svgjs" version="1.1" width="80" height="80" x="0" y="0" viewBox="0 0 512 512" style="enable-background:new 0 0 512 512" xml:space="preserve" class=""><g><g xmlns="http://www.w3.org/2000/svg" id="XMLID_74_"><g id="XMLID_118_"><path id="XMLID_214_" d="m430.5 254.5h-202.5v-54.833c0-21.689-17.645-39.334-39.333-39.334h-33.333c-7.761 0-14.451-4.607-17.525-11.221 15.188-4.979 26.191-19.281 26.191-36.112v-59.25c0-5.522-4.477-10-10-10h-18v-23.75h18c5.523 0 10-4.477 10-10s-4.477-10-10-10h-144c-5.523 0-10 4.477-10 10v492c0 5.522 4.477 10 10 10h40c5.523 0 10-4.478 10-10v-482h56v23.75h-18c-5.523 0-10 4.478-10 10v59.25c0 17.864 12.395 32.88 29.033 36.921 4.053 17.403 19.681 30.412 38.3 30.412h33.333c10.661 0 19.333 8.673 19.333 19.334v56.042c-9.827 2.221-18.54 7.41-25.134 14.584-8.753-14.542-24.69-24.293-42.865-24.293h-8c-27.57 0-50 22.43-50 50 0 11.248 3.735 21.638 10.027 30h-.027c-5.523 0-10 4.478-10 10v166c0 5.522 4.477 10 10 10h48c5.523 0 10-4.478 10-10v-108h102c5.523 0 10-4.478 10-10s-4.477-10-10-10h-112c-5.523 0-10 4.478-10 10v108h-28v-146h390v146h-28v-108c0-5.522-4.477-10-10-10h-112c-5.523 0-10 4.478-10 10s4.477 10 10 10h102v108c0 5.522 4.477 10 10 10h48c5.523 0 10-4.478 10-10v-166c0-44.94-36.56-81.5-81.5-81.5zm-390.5 237.5h-20v-472h20zm104-428.25v20h-36v-20zm-36 49.25v-9.25h36v9.25c0 9.925-8.075 18-18 18s-18-8.075-18-18zm24 213c-16.542 0-30-13.458-30-30s13.458-30 30-30h8c16.542 0 30 13.458 30 30s-13.458 30-30 30zm58 0v-22.75c0-15.853 12.897-28.75 28.75-28.75h211.75c30.506 0 55.897 22.328 60.688 51.5z" fill="#ffffff" data-original="#000000" style="" class=""/><path id="XMLID_230_" d="m352 88h18v18c0 5.522 4.477 10 10 10h40c5.523 0 10-4.478 10-10v-18h18c5.523 0 10-4.478 10-10v-40c0-5.522-4.477-10-10-10h-18v-18c0-5.523-4.477-10-10-10h-40c-5.523 0-10 4.477-10 10v18h-18c-5.523 0-10 4.478-10 10v40c0 5.522 4.477 10 10 10zm10-40h18c5.523 0 10-4.478 10-10v-18h20v18c0 5.522 4.477 10 10 10h18v20h-18c-5.523 0-10 4.478-10 10v18h-20v-18c0-5.522-4.477-10-10-10h-18z" fill="#ffffff" data-original="#000000" style="" class=""/><path id="XMLID_231_" d="m297 374c-2.63 0-5.21 1.069-7.07 2.93-1.86 1.86-2.93 4.44-2.93 7.07s1.07 5.21 2.93 7.069c1.86 1.86 4.44 2.931 7.07 2.931s5.21-1.07 7.07-2.931c1.86-1.859 2.93-4.439 2.93-7.069s-1.07-5.21-2.93-7.07c-1.86-1.861-4.44-2.93-7.07-2.93z" fill="#ffffff" data-original="#000000" style="" class=""/></g></g></g></svg>
+                                </div>
+                                <div class="col-xs-9 text-right">
+                                    <div id="patients-with-rooms-live" class="huge"></div>
+                                    <div>Patients in Isolaion</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </a>
+        </li>
+
+        <li class="" class="col-lg-4 col-md-4" style="width: 33.33%;">
+            <a data-toggle="tab" href="#tab2">
+                <div >
+                    <div class="panel panel-red">
+                        <div class="panel-heading">
+                            <div class="row">
+                                <div class="col-xs-3">
+                                    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:svgjs="http://svgjs.com/svgjs" version="1.1" width="80" height="80" x="0" y="0" viewBox="0 0 64 64" style="enable-background:new 0 0 512 512" xml:space="preserve" class=""><g><g xmlns="http://www.w3.org/2000/svg"><path d="m32 23c6.065 0 11-4.935 11-11s-4.935-11-11-11-11 4.935-11 11 4.935 11 11 11zm-8.941-12c.193-1.733.88-3.316 1.916-4.611l1.368 1.368 1.414-1.414-1.368-1.368c1.295-1.036 2.878-1.723 4.611-1.916v1.941h2v-1.941c1.733.193 3.316.88 4.611 1.916l-1.368 1.368 1.414 1.414 1.368-1.368c1.036 1.295 1.723 2.878 1.916 4.611h-1.941v2h1.941c-.193 1.733-.88 3.316-1.916 4.611l-1.368-1.368-1.414 1.414 1.368 1.368c-1.295 1.036-2.878 1.723-4.611 1.916v-1.941h-2v1.941c-1.733-.193-3.316-.88-4.611-1.916l1.368-1.368-1.414-1.414-1.368 1.368c-1.036-1.295-1.723-2.878-1.916-4.611h1.941v-2z" fill="#ffffff" data-original="#000000" style="" class=""/><path d="m62 37h-1v-1c0-1.654-1.346-3-3-3h-3v-3c0-1.654-1.346-3-3-3h-8c-1.654 0-3 1.346-3 3v3h-2v-3c0-1.654-1.346-3-3-3h-8c-1.654 0-3 1.346-3 3v3h-2v-3c0-1.654-1.346-3-3-3h-8c-1.654 0-3 1.346-3 3v3h-3c-1.654 0-3 1.346-3 3v1h-1c-.552 0-1 .448-1 1v10c0 2.414 1.721 4.434 4 4.899v8.101h-2v2h10v-2h-2v-8h18v8h-2v2h10v-2h-2v-8h18v8h-2v2h10v-2h-2v-8.101c2.279-.465 4-2.484 4-4.899v-10c0-.552-.448-1-1-1zm-4-2c.551 0 1 .449 1 1v1h-1c-.552 0-1 .448-1 1v9h-2v-1c0-1.302-.839-2.402-2-2.816v-2.369c1.161-.414 2-1.514 2-2.816v-3h3zm-7 8h-6v-2h6zm-7 2h8c.551 0 1 .449 1 1v1h-10v-1c0-.551.449-1 1-1zm-1-15c0-.551.449-1 1-1h8c.551 0 1 .449 1 1v8c0 .551-.449 1-1 1h-8c-.551 0-1-.449-1-1zm-2 5v3c0 1.302.839 2.402 2 2.816v2.369c-1.161.414-2 1.514-2 2.816v1h-2v-1c0-1.302-.839-2.402-2-2.816v-2.369c1.161-.414 2-1.514 2-2.816v-3zm-6 8h-6v-2h6zm-7 2h8c.551 0 1 .449 1 1v1h-10v-1c0-.551.449-1 1-1zm-1-15c0-.551.449-1 1-1h8c.551 0 1 .449 1 1v8c0 .551-.449 1-1 1h-8c-.551 0-1-.449-1-1zm-2 5v3c0 1.302.839 2.402 2 2.816v2.369c-1.161.414-2 1.514-2 2.816v1h-2v-1c0-1.302-.839-2.402-2-2.816v-2.369c1.161-.414 2-1.514 2-2.816v-3zm-6 8h-6v-2h6zm-7 2h8c.551 0 1 .449 1 1v1h-10v-1c0-.551.449-1 1-1zm-1-15c0-.551.449-1 1-1h8c.551 0 1 .449 1 1v8c0 .551-.449 1-1 1h-8c-.551 0-1-.449-1-1zm-6 6c0-.551.449-1 1-1h3v3c0 1.302.839 2.402 2 2.816v2.369c-1.161.413-2 1.513-2 2.815v1h-2v-9c0-.552-.448-1-1-1h-1zm4 25h-2v-8h2zm24 0h-2v-8h2zm22 0v-8h2v8zm6-13c0 1.654-1.346 3-3 3h-52c-1.654 0-3-1.346-3-3v-9h2v9c0 .552.448 1 1 1h52c.552 0 1-.448 1-1v-9h2z" fill="#ffffff" data-original="#000000" style="" class=""/><path d="m33 12v-5h-2v4h-4v2h5c.552 0 1-.448 1-1z" fill="#ffffff" data-original="#000000" style="" class=""/></g></g></svg>
+
+                                </div>
+                                <div class="col-xs-9 text-right">
+                                    <div id="patients-waiting-live" class="huge"></div>
+                                    <div>Pending Test Reports</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </a>
+        </li>
+
+        <li class="" class="col-lg-4 col-md-4" style="width: 33.33%;">
+            <a data-toggle="tab" href="#tab3">
+                <div>
+                    <div class="panel panel-orange">
+                        <div class="panel-heading" id="freeRooms">
+                            <div class="row">
+                                <div class="col-xs-3">
+                                    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:svgjs="http://svgjs.com/svgjs" version="1.1" width="80" height="80" x="0" y="0" viewBox="0 0 512 512" style="enable-background:new 0 0 512 512" xml:space="preserve" class=""><g><path xmlns="http://www.w3.org/2000/svg" d="m492 196c-11.046875 0-20 8.953125-20 20v70h-236c0-44.113281-35.886719-80-80-80h-76c-14.566406 0-28.222656 3.933594-40 10.761719v-113.761719c0-11.046875-8.953125-20-20-20s-20 8.953125-20 20v389c0 11.046875 8.953125 20 20 20s20-8.953125 20-20v-66h312c11.046875 0 20-8.953125 20-20s-8.953125-20-20-20h-312v-60h432v58h-20c-11.046875 0-20 8.953125-20 20s8.953125 20 20 20h20v68c0 11.046875 8.953125 20 20 20s20-8.953125 20-20v-276c0-11.046875-8.953125-20-20-20zm-412 50h76c22.054688 0 40 17.945312 40 40h-156c0-22.054688 17.945312-40 40-40zm252-156c0-11.046875 8.953125-20 20-20h50v-50c0-11.046875 8.953125-20 20-20s20 8.953125 20 20v50h50c11.046875 0 20 8.953125 20 20s-8.953125 20-20 20h-50v50c0 11.046875-8.953125 20-20 20s-20-8.953125-20-20v-50h-50c-11.046875 0-20-8.953125-20-20zm0 0" fill="#ffffff" data-original="#000000" style="" class=""/></g></svg>
+                                </div>
+                                <div class="col-xs-9 text-right">
+                                    <div id="free-rooms-live" class="huge"></div>
+                                    <div> Available wards</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </a>
+        </li>
+    </ul>
+
+    <div class="tab-content">
+        <!-- Table with patients in rooms-->
+        <div style="padding-left:0px;" class="col-lg-12 col-md-12 tab-pane fade in active" id="tab1">
+            <div class="col-md-6">
+                <table id="patients-in-hospital" class="table table-striped table-bordered" cellspacing="0" width="100%"></table>
+            </div>
+            <!-- Rooms manage -->
+            <div class="col-md-4 col-lg-4" style="padding-right: 30px; padding-left: 30px;">
+                <!-- Add new room -->
                 <div class="row">
-                    <div class="col-xs-3">
-                        <i class="fa fa-hotel fa-5x"></i>
-                    </div>
-                    <div class="col-xs-9 text-right">
-                        <div id="patients-with-rooms-live" class="huge"></div>
-                        <div>Patients with rooms</div>
-                    </div>
+                    <h4 style="margin-top: 0px;">Add new room in the system</h4>
+                    <form action="/app/addroom" method="post">
+                        <div class="form-group row">
+                            <label class="col-sm-5 col-md-5 col-lg-5 col-form-label">Room name</label>
+                            <div class="col-sm-7 col-md-7 col-lg-7">
+                                <input class="form-control" style="width: 100%;" type="text" name="roomName" required="true" placeholder="Enter new room name...">
+                            </div>
+                        </div>
+
+                        <input class="btn btn-success" style="float: right;" type="Submit" name="Submit" value="Add room">
+                    </form>
+                </div>
+
+                <hr style="border-top: dotted 1px;" />
+
+                <!-- Delete rooms -->
+                <div class="row">
+                    <h4 style="margin-top: 0px;">Delete rooms from the system</h4>
+                    <form action="/app/deleterooms" method="post">
+                        <table id="rooms-table" class="table table-striped table-bordered" cellspacing="0" width="100%">
+                            <!-- JavaScript works here! -->
+                        </table>
+
+                        <input class="btn btn-success" style="float: right;" type="Submit" name="Submit" value="Delete rooms">
+                    </form>
                 </div>
             </div>
         </div>
-    </div>
 
-    <div class="col-lg-4 col-md-4">
-        <div class="panel panel-red">
-            <div class="panel-heading">
-                <div class="row">
-                    <div class="col-xs-3">
-                        <i class="fa fa-child fa-5x"></i>
-                    </div>
-                    <div class="col-xs-9 text-right">
-                        <div id="patients-waiting-live" class="huge"></div>
-                        <div>Patients waiting</div>
-                    </div>
-                </div>
-            </div>
+        <!-- Table with patients waiting to get a room-->
+        <div class="col-lg-12 col-md-12 tab-pane fade" id="tab2">
+            
+            <table id="patients-waiting" class="table table-striped table-bordered" cellspacing="0" width="100%"></table>
+        </div>
+
+        <!-- Table with free rooms-->
+        <div style="padding-right:0px;" class="col-lg-12 col-md-12 tab-pane fade" id="tab3">
+            <table id="free-rooms" class="table table-striped table-bordered" cellspacing="0" width="100%"></table>
         </div>
     </div>
 
-    <div class="col-lg-4 col-md-4">
-        <div class="panel panel-orange">
-            <div class="panel-heading" id="freeRooms">
-                <div class="row">
-                    <div class="col-xs-3">
-                        <i class="fa fa-hospital-o fa-5x"></i>
-                    </div>
-                    <div class="col-xs-9 text-right">
-                        <div id="free-rooms-live" class="huge"></div>
-                        <div>Free rooms</div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
 </div>
 
-<!-- Table with patients in rooms-->
-<div style="padding-left:0px;" class="col-lg-6 col-md-6">
-	<table id="patients-in-hospital" class="table table-striped table-bordered" cellspacing="0" width="100%"></table>
-</div>
-
-<!-- Table with patients waiting to get a room-->
-<div class="col-lg-4 col-md-4">
-    <table id="patients-waiting" class="table table-striped table-bordered" cellspacing="0" width="100%"></table>
-</div>
-
-<!-- Table with free rooms-->
-<div style="padding-right:0px;" class="col-lg-2 col-md-2">
-    <table id="free-rooms" class="table table-striped table-bordered" cellspacing="0" width="100%"></table>
-</div>
 
 
 <!-- <script type="text/javascript" src="/js/jquery-1.12.4.js"></script> -->

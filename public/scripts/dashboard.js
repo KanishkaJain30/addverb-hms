@@ -51,7 +51,9 @@ $(document).ready(function() {
 
 			  	  patientsInHospitalTableConstructor.push(patientsRowConstructor);
 			  }
-		  }
+      }
+      
+
 
 		  $('#patients-waiting').dataTable({
 		       data: patientsWaitingTableConstructor,
@@ -59,7 +61,7 @@ $(document).ready(function() {
 		       	 title: "<span class=\"fa fa-hospital-o fa-fw\" style=\"color: black;\"></span>   " + "  no.",
                      width: "30%"
 		       }, {
-		           title: "Patients waiting",
+		           title: "Pending Test Reports",
                      width: "60%"
 		       }, {
 		           title: "Score",
@@ -97,7 +99,7 @@ $(document).ready(function() {
 	                title: "<span class=\"fa fa-hospital-o fa-fw\" style=\"color: black;\"></span>   " + "  no.",
                      width: "25%"
 	            },{
-	                title: "Patients with rooms",
+	                title: "Patients in Isolation",
                      width: "45%"
 	            },{
 	           	 title: "Room",
