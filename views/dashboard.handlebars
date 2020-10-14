@@ -1,5 +1,6 @@
 <link rel="stylesheet" type="text/css" href="/css/dataTables.bootstrap.min.css">
 <link rel="stylesheet" href="/css/jquery.dataTables.min.css">
+
 <!-- <link rel="stylesheet" type="text/css" href="/css/bootstrap.min.css"> -->
 
 <div class="row">
@@ -72,37 +73,65 @@
             <div class="col-md-6">
                 <table id="patients-in-hospital" class="table table-striped table-bordered" cellspacing="0" width="100%"></table>
             </div>
-            <!-- Rooms manage -->
-            <div class="col-md-4 col-lg-4" style="padding-right: 30px; padding-left: 30px;">
+             <!-- Rooms manage -->
+            <div class="col-md-5 col-lg-5" style="border:2px solid #1e7874; margin-top: 50px; margin-left:30px;">
                 <!-- Add new room -->
-                <div class="row">
-                    <h4 style="margin-top: 0px;">Add new room in the system</h4>
-                    <form action="/app/addroom" method="post">
-                        <div class="form-group row">
-                            <label class="col-sm-5 col-md-5 col-lg-5 col-form-label">Room name</label>
-                            <div class="col-sm-7 col-md-7 col-lg-7">
-                                <input class="form-control" style="width: 100%;" type="text" name="roomName" required="true" placeholder="Enter new room name...">
+                 <form action="/app/addpatient" method="post">
+                    <!-- First name input -->
+                    <div class="form-group row" style="padding-top: 1.5rem;">
+                        <label class="col-sm-3 col-md-3 col-lg-3 col-form-label">First Name</label>
+                        <div class="col-sm-9 col-md-9 col-lg-9">
+                            <input id="first-name" class="form-control" style="width: 100%;" type="text" name="firstName" required="true" placeholder="Enter first name...">
+                        </div>
+                    </div>
+
+                    <!-- Last name input -->
+                    <div class="form-group row">
+                        <label class="col-sm-3 col-md-3 col-lg-3 col-form-label">Last Name</label>
+                        <div class="col-sm-9 col-md-9 col-lg-9">
+                            <input class="form-control" style="width: 100%;" type="text" name="lastName" required="true" placeholder="Enter last name...">
+                        </div>
+                    </div>
+
+                    <!-- Hospital number input -->
+                    <div class="form-group row">
+                        <label class="col-sm-3 col-md-3 col-lg-3 col-form-label">Hospital no.</label>
+                        <div class="col-sm-9 col-md-9 col-lg-9">
+                            <input class="form-control" style="width: 100%;" type="text" name="hospitalNumber" required="true" placeholder="Enter Hospital no...">
+                        </div>
+                    </div>
+
+                    <!-- Date of birth -->
+                    <div class="form-group row">
+                        <label class="col-sm-3 col-md-3 col-lg-3 col-form-label">Date of birth</label>
+                        <div class="col-sm-9 col-md-9 col-lg-9">
+                            <input class="form-control" style="width: 100%;" type="text" name="dateOfBirth" required="true" placeholder="DD/MM/YYYY">
+                        </div>
+                    </div>
+
+                    <!-- Sex -->
+                    <div class="form-group row">
+                        <label class="col-sm-3 col-md-3 col-lg-3 col-form-label">Sex</label>
+                        <div class="col-sm-9 col-md-9 col-lg-9">
+                            <div class="btn-group" data-toggle="buttons">
+                            <label class="btn btn-success active" style="margin:0px; background-color: #1e7874 ">
+                                <input id="male-radio" type="radio" name="sex" value="male" autocomplete="off" checked>Male
+                            </label>
+                            <label class="btn btn-success" style="margin:0px;">
+                                <input id="female-radio" type="radio" name="sex" value="female" autocomplete="off"> Female
+                            </label>
                             </div>
                         </div>
+                    </div>
 
-                        <input class="btn btn-success" style="float: right;" type="Submit" name="Submit" value="Add room">
-                    </form>
-                </div>
-
-                <hr style="border-top: dotted 1px;" />
-
-                <!-- Delete rooms -->
-                <div class="row">
-                    <h4 style="margin-top: 0px;">Delete rooms from the system</h4>
-                    <form action="/app/deleterooms" method="post">
-                        <table id="rooms-table" class="table table-striped table-bordered" cellspacing="0" width="100%">
-                            <!-- JavaScript works here! -->
-                        </table>
-
-                        <input class="btn btn-success" style="float: right;" type="Submit" name="Submit" value="Delete rooms">
-                    </form>
-                </div>
+                    <table id="add-new-patient" class="table table-striped table-bordered" cellspacing="0" width="100%">
+                        <!-- JavaScript works here! -->
+                    </table>
+                    <input class="btn btn-success" style="float: right; margin-bottom:1.5rem" type="Submit" name="Submit" value="Add patient">
+                </form>
             </div>
+
+
         </div>
 
         <!-- Table with patients waiting to get a room-->
@@ -113,7 +142,38 @@
 
         <!-- Table with free rooms-->
         <div style="padding-right:0px;" class="col-lg-12 col-md-12 tab-pane fade" id="tab3">
-            <table id="free-rooms" class="table table-striped table-bordered" cellspacing="0" width="100%"></table>
+            <div class="col-md-6">
+                <table id="free-rooms" class="table table-striped table-bordered" cellspacing="0" width="100%"></table>
+            </div>
+            <!-- Rooms manage -->
+            <div class="col-md-5 col-lg-5" style=" border:2px solid #1e7874; margin-top: 50px; margin-left:30px;" >
+                <!-- Add new room -->
+                <div class="row" style="padding-right: 30px; padding-left: 30px;padding-bottom: 1.5rem; ">
+                    <h4 class="" style="margin-top: 1.5rem; font-weight: bold">Add new room in the system</h4>
+                    <form action="/app/addroom" method="post">
+                        <div class="form-group row ">
+                            <label class="col-sm-5 col-md-5 col-lg-5 col-form-label">Room name</label>
+                            <div class="col-sm-7 col-md-7 col-lg-7">
+                                <input class="form-control" style="width: 100%;" type="text" name="roomName" required="true" placeholder="Enter new room name...">
+                            </div>
+                        </div>
+
+                        <input class="btn btn-success" style="float: right;" type="Submit" name="Submit" value="Add room">
+                    </form>
+                </div>
+
+                <!-- Delete rooms -->
+                <div class="row" style="padding: 1.5rem 30px;">
+                    <h4 style="margin-top: 0px; font-weight: bold;">Delete rooms from the system</h4>
+                    <form action="/app/deleterooms" method="post">
+                        <div id="rooms-table_wrapper" class="dataTables_wrapper form-inline dt-bootstrap no-footer"><div class="row"><div class="col-sm-6"></div><div class="col-sm-6"><div id="rooms-table_filter" class="dataTables_filter"><label><input type="search" class="form-control input-sm" placeholder="Search room..." aria-controls="rooms-table"></label></div></div></div><div class="row"><div class="col-sm-12"><div class="dataTables_scroll"><div class="dataTables_scrollHead" style="overflow: hidden; position: relative; border: 0px; width: 100%;"><div class="dataTables_scrollHeadInner" style="box-sizing: content-box; width: 243px; padding-right: 0px;"><table class="table table-striped table-bordered dataTable no-footer" cellspacing="0" width="100%" role="grid" style="margin-left: 0px; width: 243px;"><thead><tr role="row"><th class="sorting_asc" tabindex="0" aria-controls="rooms-table" rowspan="1" colspan="1" style="width: 96px;" aria-sort="ascending" aria-label="Room: activate to sort column descending">Room</th><th class="sorting" tabindex="0" aria-controls="rooms-table" rowspan="1" colspan="1" style="width: 48px;" aria-label="Select: activate to sort column ascending">Select</th></tr></thead></table></div></div><div class="dataTables_scrollBody" style="position: relative; overflow: auto; max-height: 40vh; width: 100%;"><table id="rooms-table" class="table table-striped table-bordered dataTable no-footer" cellspacing="0" width="100%" role="grid" style="width: 100%;"><thead><tr role="row" style="height: 0px;"><th class="sorting_asc" aria-controls="rooms-table" rowspan="1" colspan="1" style="width: 96px; padding-top: 0px; padding-bottom: 0px; border-top-width: 0px; border-bottom-width: 0px; height: 0px;" aria-sort="ascending" aria-label="Room: activate to sort column descending"><div class="dataTables_sizing" style="height:0;overflow:hidden;">Room</div></th><th class="sorting" aria-controls="rooms-table" rowspan="1" colspan="1" style="width: 48px; padding-top: 0px; padding-bottom: 0px; border-top-width: 0px; border-bottom-width: 0px; height: 0px;" aria-label="Select: activate to sort column ascending"><div class="dataTables_sizing" style="height:0;overflow:hidden;">Select</div></th></tr></thead>
+                            <!-- JavaScript works here! -->
+                        <tbody><tr role="row" class="odd"><td class="sorting_1">67</td><td><input type="checkbox" name="RD[]" value="67"></td></tr><tr role="row" class="even"><td class="sorting_1">cancer</td><td><input type="checkbox" name="RD[]" value="cancer"></td></tr><tr role="row" class="odd"><td class="sorting_1">covid 19 room</td><td><input type="checkbox" name="RD[]" value="covid 19 room"></td></tr><tr role="row" class="even"><td class="sorting_1">covid 19 room 2</td><td><input type="checkbox" name="RD[]" value="covid 19 room 2"></td></tr><tr role="row" class="odd"><td class="sorting_1">Emergency Room</td><td><input type="checkbox" name="RD[]" value="Emergency Room"></td></tr><tr role="row" class="even"><td class="sorting_1">General ward </td><td><input type="checkbox" name="RD[]" value="General ward "></td></tr><tr role="row" class="odd"><td class="sorting_1">General ward 2</td><td><input type="checkbox" name="RD[]" value="General ward 2"></td></tr><tr role="row" class="even"><td class="sorting_1">headache room</td><td><input type="checkbox" name="RD[]" value="headache room"></td></tr><tr role="row" class="odd"><td class="sorting_1">Special Ward</td><td><input type="checkbox" name="RD[]" value="Special Ward"></td></tr></tbody></table></div></div></div></div><div class="row"><div class="col-sm-5"></div><div class="col-sm-7"></div></div></div>
+
+                        <input class="btn btn-success" style="float: right; margin-top: 1.5rem;" type="Submit" name="Submit" value="Delete rooms">
+                    </form>
+                </div>
+            </div>
         </div>
     </div>
 

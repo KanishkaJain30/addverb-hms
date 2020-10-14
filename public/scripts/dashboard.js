@@ -84,11 +84,11 @@ $(document).ready(function() {
 
                    // color the Score field
                    if (aData[2] > 35) { // red
-                       $('td:eq(2)', nRow).css("background-color", "#ffad99");
+                       $('td:eq(2)', nRow).css("background-color", "transparent");
                    } else if (aData[2] >=25) { // orange
-                       $('td:eq(2)', nRow).css("background-color", "#ffdd99");
+                       $('td:eq(2)', nRow).css("background-color", "transparent");
                    } else if (aData[2] >= 5) { // yellow
-                       $('td:eq(2)', nRow).css("background-color", "#ffffcc");
+                       $('td:eq(2)', nRow).css("background-color", "transparent");
                    }
                }
 		   });
