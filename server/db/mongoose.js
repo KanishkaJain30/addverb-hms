@@ -1,5 +1,7 @@
 var mongoose = require('mongoose');
 mongoose.Promise = global.Promise;
-mongoose.connect('mongodb://admin:admin123@ds145220.mlab.com:45220/nhs-app');
+mongoose.connect(
+  'mongodb+srv://khyatigoyal:khyatigoyal@cluster0.66s8n.mongodb.net/addverb?retryWrites=true&w=majority'
+);
 
 module.exports = { mongoose };
