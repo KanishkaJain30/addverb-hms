@@ -117,15 +117,15 @@ $(document).ready(function () {
           },
         ],
         scrollY: '60vh',
-        scrollCollapse: true,
+/*        scrollCollapse: true,
         paging: false,
-        resposnive: true,
+      /*  resposnive: true,
         info: false,
         language: {
           searchPlaceholder: 'Search patient in room...',
           sSearch: '',
         },
-        aaSorting: [[3, 'desc']],
+/*        aaSorting: [[3, 'desc']],
         fnCreatedRow: function (nRow, aData, iDisplayIndex) {
           if (aData[3] >= 35) {
             $('td:eq(3)', nRow).css('background-color', '#ffad99');
@@ -134,7 +134,7 @@ $(document).ready(function () {
           } else if (aData[3] >= 10) {
             $('td:eq(3)', nRow).css('background-color', '#ffffcc');
           }
-        },
+        },*/
       });
 
       $('#free-rooms').dataTable({
@@ -271,6 +271,8 @@ $(function () {
     });
   });
 });
+
+
 
 $('body').on('dblclick', '#patients-in-hospital > tbody > tr', function () {
   var NHSnumber = $(this).children('td')[0];
