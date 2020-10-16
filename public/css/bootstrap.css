@@ -4002,6 +4002,12 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
   text-decoration: none;
   background-color: #eee;
 }
+
+.nav> .active>a > div>.panel> .panel-heading{
+  background-color: #679289;
+  border: 1px solid #679289;
+}
+
 .nav > li.disabled > a {
   color: #777;
 }
