@@ -4,7 +4,7 @@ It's a web application for managing hospitals rooms and determining the patient'
 
 It allows nurses to keep track of the patients of COVID19 in real time and to have an overview over the patients and rooms, and better manage the rooms assignment across patients.
 
-
+FOR COMPLETE INFO OPEN THE HMS System READ ME.pdf
 
 
 # Installing:
